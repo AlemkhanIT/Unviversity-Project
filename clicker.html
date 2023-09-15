@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+	<!--Pridanie optimalizácie seo a zapojenie všetkých potrebných štýlov a ikon-->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Alemkhan Bexeiit">
+	<meta name="description" content="Záverečná stránka Alemkhan Bexeiit">
+	<meta name="keywords" content="Alemkhan, Bexeiit, Alemkhan Bexeiit, stranka Alemkhan, Bexeiit stranka, zaverecna stranka Alemkhan, UMB Alemkhan, UMB Bexeiit, documentacia html, todo, kliker, Záverečná stránka Alemkhan, Záverečná stránka" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="shortcut icon" href="img/code_codepen_coding_development_program_programming_icon_123266.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+	<title>Počítadlo Kliker</title>
+	<!--Pridanie špeciálnych štýlov do tohto html-->
+	<style type="text/css">
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f2f2f2;
+		}
+		.title {
+			text-align: center;
+            margin: 90px 0;
+		}
+		p {
+			text-align: center;
+			font-size: 24px;
+			margin-bottom: 50px;
+		}
+		button {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 24px;
+			padding-top: 10px;
+			padding-bottom: 10px;
+			padding-left: 20px;
+			padding-right: 20px;
+			border-radius: 10px;
+			background-color: #4CAF50;
+			color: white;
+			border-color: #4CAF50;
+		}
+		button:hover {
+			background-color: #3e8e41;
+			border-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<!--Hlavička html kódu-->
+    <header>
+        <div class="container header__inner">
+            <h1 class="logo"><a class="logo-a" href="index.html"><i class="fa-solid fa-code"></i> Alemkhan <span class="hide-logo">Bexeiit</span></a></h1>
+            <nav>
+                <div class="darkmodebtn">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <ul class="ul menu__list">
+                    <li class="menu__item"><a id="ul-li-1" class="ul-li-a menu__link" href="index.html#home">Domov</a><div class="link-bottom" id="bt1"> </div></li>
+                    <li class="menu__item"><a id="ul-li-2" class="ul-li-a menu__link" href="index.html#about">O mne</a><div class="link-bottom" id="bt2"> </div></li>
+                    <li class="menu__item"><a id="ul-li-3" class="ul-li-a menu__link" href="index.html#works">Programy</a><div class="link-bottom" id="bt3"> </div></li>
+                    <li class="menu__item"><a id="ul-li-4" class="ul-li-a menu__link" href="index.html#contact">Odkazy</a><div class="link-bottom" id="bt4"> </div></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+	<!--Frontend klikera-->
+	<h1 class="title">Počítadlo Kliker</h1>
+	<!--Pridanie dynamickej premennej-->
+	<p>Kliknutia: <span id="clicks">0</span></p>
+	<!--Pri dotyku - funguje funkcia increment-->
+	<button onclick="increment()">Klikni na mňa!</button>
+	<!--Pri dotyku - funguje funkcia reset-->
+	<button onclick="reset()">Reset</button>
+
+	<!--Pridanie špeciálnych scriptov do tohto html-->
+	<script type="text/javascript">
+		var clicks = 0;
+		//funkcia pripočíta +1 a vypíše výsledok vo vnútri id clicks
+		function increment() {
+			clicks++;
+			document.getElementById("clicks").innerHTML = clicks;
+		}
+		//funkcia nastaví hodnotu na 0 a vypíše výsledok vo vnútri id clicks
+		function reset() {
+			clicks = 0;
+			document.getElementById("clicks").innerHTML = clicks;
+		}
+	</script>
+
+	<!--pridanie môjho skriptu na konci, aby to fungovalo správne-->
+    <script src="script.js"></script>
+</body>
+</html>

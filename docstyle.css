@@ -1,0 +1,137 @@
+/* tieto štýly pre stránku s dokumentáciou */
+
+/* použité grid */
+.doc{
+    font-family: sans-serif;
+    margin:0 auto;
+    margin-top: 30px;
+    padding: 0;
+    display:grid;
+    height: 100vh;
+    grid-template-columns:350px 1fr;
+    grid-template-areas:
+      "header main"
+  }
+  
+/* štýly pre header */
+  .header{
+    grid-area:header;
+    max-width:300px;
+    border-right:3px solid gray;
+    position:fixed;
+    height: 100%;
+    padding-top: 50px;
+  }
+  
+  /* štýly pre main */
+  main{
+    padding:8px;
+    padding-right:30px;
+    grid-area:main;
+    max-width:100%;
+  }
+  ul{
+    padding: 0;
+  }
+
+  ul li{
+    list-style:none;
+  }
+
+  /* štýly pre odkazy */
+  .doclinks{
+    text-decoration:none;
+    font-size: 20px;
+    transition:.2s all ease;
+    padding: 5px 7px;
+    display: block;
+    color: #159a5c;
+  }
+  .doclinks:hover{
+    background-color:#159a5c;
+    color:#fff;
+  }
+
+  /* štýly pre texta */
+  h1{
+    font-weight: 600;
+    margin: 0;
+  }
+  .section h2{
+    font-size: 30px;
+    padding-top: 50px;
+  }
+  .section h3{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    padding-top: 50px;
+  }
+  p{
+    margin: 6px;
+    margin-bottom: 5px;
+    font-size: 19px;
+  }
+  .code{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border-radius:5px;
+    background-color: #6b6969;
+    color: #fff;
+    font-size: 15px;
+    padding: 8px;
+  }
+  .code.darker-mode{
+    background-color: #5c5c5c;
+  }
+  code{
+    display: block;
+  }
+  xmp{
+    margin: 5px;
+  }
+  ol{
+    margin-bottom: 0;
+  }
+  ol li{
+    margin: 5px;
+    font-size: 18px;
+  }
+  .section{
+    margin-top: 20px;
+  }
+  xmp{
+    white-space:pre-wrap;
+  }
+  img{
+    max-width:100%;
+    height:auto;
+  }
+  #whathtml,#images,#marking,#links,#conclusion,#anatomy{
+    padding-top:5px;
+    margin-top:-5px;
+  }
+
+  /* štýly pre responzívny dizajn */
+  @media (max-width:800px){
+    .doc{
+      grid-template-areas:
+        "header"
+        "main";
+      grid-template-columns:100%;
+    }
+    .header{
+      max-width: 100%;
+      border:1px solid gray;
+      position:relative;
+    }
+    ul{
+      display: block;
+      width: 100%;
+      position:relative;
+      overflow-y:scroll;
+    }
+    main{
+      padding-right:8px;
+    }
+  }

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <!--pridanie optimalizácie seo a zapojenie všetkých potrebných štýlov a ikon-->
+	<title>Todo App</title>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Alemkhan Bexeiit">
+	<meta name="description" content="Záverečná stránka Alemkhan Bexeiit">
+	<meta name="keywords" content="Alemkhan, Bexeiit, Alemkhan Bexeiit, stranka Alemkhan, Bexeiit stranka, zaverecna stranka Alemkhan, UMB Alemkhan, UMB Bexeiit, documentacia html, todo, kliker, Záverečná stránka Alemkhan, Záverečná stránka" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="shortcut icon" href="img/code_codepen_coding_development_program_programming_icon_123266.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <!--pridanie špeciálnych štýlov do tohto html-->
+	<style type="text/css">
+		body {
+			background-color: #f5f5f5;
+			font-family: Arial;
+		}
+		form {
+			margin-top: 30px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+            padding: 9px;
+            gap: 10px;
+		}
+		input[type="text"] {
+			padding: 10px;
+			border-radius: 5px;
+			border: none;
+			margin-bottom: 10px;
+			width: 100%;
+			font-size: 16px;
+		}
+		button[type="submit"] {
+			padding: 10px 20px;
+			background-color: #333;
+			color: #fff;
+			border-radius: 5px;
+			border: none;
+			font-size: 16px;
+			cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+		}
+        .delete-btn {
+            background-color: #ff0000;
+            color: #fff;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        .delete-btn:hover {
+            background-color: #ff5555;
+        }
+        .todo-item {
+            display:flex; 
+            justify-content:flex-start; 
+            align-items:center; 
+            margin-bottom:.5rem; 
+            padding:.5rem; 
+            background-color:#fff; 
+            border-radius:.25rem; 
+            box-shadow:.1rem .1rem .2rem rgba(0,0,0,.2);
+        }
+        .todo-item span {
+            margin-right:auto; 
+            margin-left:.5rem; 
+            font-size:.875rem; 
+            font-weight:bold; 
+            color:#333; 
+        }
+        /* responzívny dizajn tejto stránky */
+        @media only screen and (min-width : 768px) {
+            form {
+                width: 50%;
+                margin-left:auto; 
+                margin-right:auto; 
+                padding:.5rem; 
+                border-radius:.25rem; 
+                display:flex; 
+                justify-content:center; 
+                align-items:center; 
+                flex-wrap:nowrap; 
+                flex-direction:row; 
+                margin-bottom:.5rem
+            }
+            
+            input[type="text"] {
+                width:auto
+            }
+            
+            button[type="submit"] {
+                width:auto
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <!--Hlavička html kódu-->
+    <header>
+        <div class="container header__inner">
+            <h1 class="logo"><a class="logo-a" href="index.html"><i class="fa-solid fa-code"></i> Alemkhan <span class="hide-logo">Bexeiit</span></a></h1>
+            <nav>
+                <div class="darkmodebtn">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <ul class="ul menu__list">
+                    <li class="menu__item"><a id="ul-li-1" class="ul-li-a menu__link" href="index.html#home">Domov</a><div class="link-bottom" id="bt1"> </div></li>
+                    <li class="menu__item"><a id="ul-li-2" class="ul-li-a menu__link" href="index.html#about">O mne</a><div class="link-bottom" id="bt2"> </div></li>
+                    <li class="menu__item"><a id="ul-li-3" class="ul-li-a menu__link" href="index.html#works">Programy</a><div class="link-bottom" id="bt3"> </div></li>
+                    <li class="menu__item"><a id="ul-li-4" class="ul-li-a menu__link" href="index.html#contact">Odkazy</a><div class="link-bottom" id="bt4"> </div></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!--Frontend ToDo-->
+	<h1>Todo Program</h1>
+	
+	<form id="todo-form">
+		<input type="text" id="todo-input" placeholder="Napíšte sem svoju misiu...">
+		<button type="submit">Pridať misiu</button>
+	</form>
+
+    <div id="todo-list"></div>
+
+    <!--pridanie špeciálnych scriptov do tohto html-->
+    <script>
+        //deklarácia všetkých potrebných premenných
+        const form = document.querySelector('#todo-form');
+        const input = document.querySelector('#todo-input');
+        const list = document.querySelector('#todo-list');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            //pridanie nového bloku stlačením submit formy
+            const item = document.createElement('div');
+            item.classList.add('todo-item');
+            //pridanie textu stlačením submit formy
+            const text = document.createElement('span');
+            text.textContent = input.value;
+
+            // Pridanie tlačidla na odstránenie stlačením submit formy
+            const deleteBtn = document.createElement('button');
+            deleteBtn.classList.add('delete-btn');
+            deleteBtn.textContent = 'Vymazať';
+
+            item.appendChild(text);
+            item.appendChild(deleteBtn);
+            list.appendChild(item);
+            
+            input.value = '';
+            deleteBtn.addEventListener('click', () => {
+                item.remove();
+            });
+        });
+    </script>
+
+    <!--pridanie môjho skriptu na konci, aby to fungovalo správne-->
+    <script src="script.js"></script>
+</body>
+</html>

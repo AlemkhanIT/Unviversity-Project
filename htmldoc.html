@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <!--pridanie optimalizácie seo a zapojenie všetkých potrebných štýlov a ikon-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alemkhan Bexeiit">
+	<meta name="description" content="Záverečná stránka Alemkhan Bexeiit">
+	<meta name="keywords" content="Alemkhan, Bexeiit, Alemkhan Bexeiit, stranka Alemkhan, Bexeiit stranka, zaverecna stranka Alemkhan, UMB Alemkhan, UMB Bexeiit, documentacia html, todo, kliker, Záverečná stránka Alemkhan, Záverečná stránka" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="shortcut icon" href="img/code_codepen_coding_development_program_programming_icon_123266.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <!--pridanie špeciálnych štýlov do tohto html-->
+  <link rel="stylesheet" href="docstyle.css">
+  <title>Dokumentácia HTML</title>
+</head>
+<body>
+  <!--Hlavička html kódu-->
+    <header>
+        <div class="container header__inner">
+            <h1 class="logo"><a class="logo-a" href="index.html"><i class="fa-solid fa-code"></i> Alemkhan <span class="hide-logo">Bexeiit</span></a></h1>
+            <nav>
+                <div class="darkmodebtn">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <ul class="ul menu__list">
+                    <li class="menu__item"><a id="ul-li-1" class="ul-li-a menu__link" href="index.html#home">Domov</a><div class="link-bottom" id="bt1"> </div></li>
+                    <li class="menu__item"><a id="ul-li-2" class="ul-li-a menu__link" href="index.html#about">O mne</a><div class="link-bottom" id="bt2"> </div></li>
+                    <li class="menu__item"><a id="ul-li-3" class="ul-li-a menu__link" href="index.html#works">Programy</a><div class="link-bottom" id="bt3"> </div></li>
+                    <li class="menu__item"><a id="ul-li-4" class="ul-li-a menu__link" href="index.html#contact">Odkazy</a><div class="link-bottom" id="bt4"> </div></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- odkazy na dokumentáciu -->
+    <div class="doc">
+        <div class="header">
+            <div class="logo"><h1>Mini Dokumentácia HTML</h1></div>
+            <nav class="navbar" id="navbar">
+              <ul>
+                <li><a class="doclinks" href="#whathtml">Čo je to HTML?</a></li>
+                <li><a class="doclinks"  href="#images">Obrázky</a></li>
+                <li><a class="doclinks"  href="#marking">Označovanie textu</a></li>
+                <li><a class="doclinks"  href="#links">Odkazy</a></li>
+                <li><a class="doclinks"  href="#conclusion">Záver</a></li>
+                <li><a class="doclinks"  href="#anatomy">Anatómia dokumentu HTML</a></li>
+                <li><a class="doclinks"  href="#reference">Referencia</a></li>
+              </ul>
+            </nav>
+        </div>
+        
+        <!--hlavná časť dokumentácie-->
+          <main>
+            <!--"Čo je to HTML?" časť dokumentácie-->
+            <section id="whathtml" class="section">
+              <h2>Čo je to HTML?</h2>
+              <p>HTML je značkovací jazyk, ktorý definuje štruktúru obsahu. Jazyk HTML sa skladá zo série prvkov, ktoré sa používajú na uzavretie alebo obalenie rôznych častí obsahu, aby sa obsah zobrazil určitým spôsobom alebo sa správal určitým spôsobom. Obklopujúce značky môžu vytvoriť hypertextový odkaz na slovo alebo obrázok, môžu slová zvýrazniť kurzívou, zväčšiť alebo zmenšiť písmo atď. Vezmite si napríklad nasledujúci riadok obsahu:</p>
+              <div class="code">
+              <code>Moja mačka je veľmi nevrlá</code></div>
+              <p>Ak by sme chceli, aby riadok stál sám o sebe, mohli by sme určiť, že ide o odsek, a to tak, že ho uzavrieme značkami odseku:</p>
+              <div class="code"> 
+            
+                     <code>&#x3C;p&#x3E;Moja ma&#x10D;ka je ve&#x13E;mi nevrl&#xE1;&#x3C;/p&#x3E;</code>
+                   
+              </div>
+              <p>Hlavné časti nášho prvku sú tieto:</p>
+              <ol style="margin-left: 10px;">
+                <li>Úvodná značka: Tento tag sa skladá z názvu prvku (v tomto prípade p), ktorý je zabalený do otváracích a zatváracích uhlových zátvoriek. Uvádza sa tu, kde sa prvok začína alebo začína pôsobiť - v tomto prípade kde sa začína odsek.</li>
+                <li>Záverečná značka: Tento tag je rovnaký ako otvárací tag s tým rozdielom, že pred názvom prvku obsahuje lomku vpred. Uvádza sa tým, kde sa prvok končí - v tomto prípade kde sa končí odsek. Nepridanie uzatváracej značky je jednou zo štandardných začiatočníckych chýb a môže viesť k zvláštnym výsledkom.</li>
+                <li>Obsah: V tomto prípade je to text.</li>
+                <li>The element: The opening tag, the closing tag, and the content together comprise the element.</li>
+              </ol>
+              <p>Atribúty obsahujú dodatočné informácie o prvku, ktoré sa nemajú zobrazovať v skutočnom obsahu. Tu je class názov atribútu a editor-note hodnota atribútu. Atribút class umožňuje priradiť prvku nejedinečný identifikátor, ktorý sa môže použiť na jeho zacielenie (a všetkých ostatných prvkov s rovnakou hodnotou class) pomocou informácií o štýle a ďalších vecí.</p>
+            </section>
+            
+            <!--"Obrázky" časť dokumentácie-->
+            <section id="images" class="section"><h3>Obrázky</h3>
+              <p>Zamerajme sa na <code>&#x3C;img&#x3E;</code></p>
+              <div class="code">
+                <code>&#x3C;img src=&#x22;images/firefox-icon.png&#x22; alt=&#x22;My test image&#x22;&#x3E;</code>
+              </div>
+              <p>Ako sme už povedali, vloží obrázok do našej stránky na pozíciu, na ktorej sa zobrazí. Robí to prostredníctvom atribútu src (source), ktorý obsahuje cestu k nášmu obrázkovému súboru.
+        
+                Zahrnuli sme aj atribút alt (alternatívny). V tomto atribúte zadávame popisný text pre používateľov, ktorí obrázok nevidia.</p>
+              <p>Kľúčové slová pre alt text sú "popisný text". Text alt, ktorý napíšete, by mal čitateľovi poskytnúť dostatok informácií, aby si vedel predstaviť, čo obrázok vyjadruje. V tomto príklade náš súčasný text "Môj testovací obrázok" nie je vôbec dobrý. Oveľa lepšou alternatívou pre naše logo Firefoxu by bolo "Logo Firefoxu: horiaca líška obklopujúca Zem".</p>
+            </section>
+
+            <!--"Označovanie textu" časť dokumentácie-->
+            <section id="marking" class="section"><h3>Označovanie textu</h3>
+              <p>Táto časť sa zaoberá niektorými základnými prvkami HTML, ktoré budete používať na označovanie textu.</p>
+              <p>Prvky nadpisov umožňujú určiť, že určité časti obsahu sú nadpisy alebo podnadpisy. Rovnako ako kniha má hlavný názov, názvy kapitol a podnadpisy, môže mať aj dokument HTML nadpisy. Jazyk HTML obsahuje 6 úrovní nadpisov:</p>
+              <div class="code">
+                
+                  <code>
+                    &#x3C;!-- 4 heading levels: --&#x3E;<br>
+                    &#x3C;h1&#x3E;M&#xF4;j hlavn&#xFD; titul&#x3C;/h1&#x3E;<br>
+                    &#x3C;h2&#x3E;M&#xF4;j nadpis najvy&#x161;&#x161; &#xFA;rovne&#x3C;/h2&#x3E;<br>
+                    &#x3C;h3&#x3E;M&#xF4;j podnadpis&#x3C;/h3&#x3E;<br>
+                    &#x3C;h4&#x3E;M&#xF4;j podtitul&#x3C;/h4&#x3E;<br>
+                    &#x3C;!-- and others --&#x3E;<br>
+                </code>
+                
+              </div>
+              <p>Ak by sme napríklad chceli premeniť časť nasledujúceho fragmentu odseku na zoznam</p>
+              <div class="code">
+                
+                  <code>
+                    &#x3C;p&#x3E;V Mozille sme glob&#xE1;lna komunita&#x3C;/p&#x3E;<br>
+                    &#x3C;ul&#x3E;
+                    &#x3C;li&#x3E;technologies&#x3C;/li&#x3E;<br>
+                    &#x3C;li&#x3E;thinkers&#x3C;/li&#x3E;<br>
+                    &#x3C;li&#x3E;builders&#x3C;/li&#x3E;<br>
+                    &#x3C;/ul&#x3E;
+                  </code>
+                
+              </div>
+              <p>Skúste na stránku s príkladom pridať usporiadaný alebo neusporiadaný zoznam.</p>
+            </section>
+
+            <!--"Odkazy" časť dokumentácie-->
+            <section id="links" class="section"><h3>Odkazy</h3>
+              <p>Odkazy sú veľmi dôležité - robia web webom! Na pridanie odkazu musíme použiť jednoduchý prvok - "a" je skratka pre "anchor".</p>
+              <div class="code">
+                
+                  <code>&#x3C;a&#x3E;Mozilla Manifesto&#x3C;/a&#x3E;</code>
+                
+              </div>
+              <p>Pridajte prvku atribút href, ako je znázornené nižšie:</p>
+              <div class="code">
+                
+                  <code>&#x3C;a href=&#x22;&#x22;&#x3E;Mozilla Manifesto&#x3C;/a&#x3E;</code>
+                
+              </div>
+              <p>Hodnotu tohto atribútu vyplňte webovou adresou, na ktorú má odkaz viesť:</p>
+              <div class="code">
+                
+                  <code>&#x3C;a href=&#x22;https://www.mozilla.org/en-US/about/manifesto/&#x22;&#x3E;Mozilla Manifesto&#x3C;/a&#x3E;</code>
+                
+              </div>
+              <p>Ak na začiatku webovej adresy vynecháte časť https:// alebo http://, ktorá sa nazýva protokol, môžete dostať neočakávané výsledky. Po vytvorení odkazu naň kliknite, aby ste sa uistili, že vás odošle tam, kam ste chceli.</p>
+            </section>
+
+            <!--"Záver" časť dokumentácie-->
+            <section id="conclusion" class="section"><h3>Záver</h3>
+              <p>Ak ste postupovali podľa všetkých pokynov v tomto článku, mali by ste mať stránku, ktorá bude vyzerať takto.</p>
+              <img src="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics/finished-test-page-small.png" alt="">
+              <p>Ak sa zaseknete, vždy môžete porovnať svoju prácu s našou <a href="https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html" target="_blank">hotovým príkladom</a> kód na GitHub.</p>
+            </section>
+
+            <!--"Anatómia dokumentu HTML" časť dokumentácie-->
+            <section id="anatomy" class="section"><h3>Anatómia dokumentu HTML</h3>
+              <p>Jednotlivé prvky HTML nie sú samy o sebe veľmi užitočné. Ďalej preskúmame, ako sa jednotlivé prvky spájajú do celej stránky HTML:</p>
+              <div class="code">
+                
+                  <code>&#x3C;!DOCTYPE html&#x3E;<br> 
+                    &#x3C;html&#x3E;<br>
+                      &#x3C;head&#x3E;<br>
+                        &#x3C;meta charset=&#x22;utf-8&#x22;&#x3E;<br>
+                        &#x3C;title&#x3E;Moja testovacia str&#xE1;nka&#x3C;/title&#x3E;<br>
+                      &#x3C;/head&#x3E;<br>
+                      &#x3C;body&#x3E;<br>
+                        &#x3C;p&#x3E;Toto je moja str&#xE1;nka&#x3C;/p&#x3E;<br>
+                      &#x3C;/body&#x3E;<br>
+                    &#x3C;/html&#x3E;<br>
+                  </code>
+                
+              </div>
+              <p>Teraz môžete tento súbor otvoriť vo webovom prehliadači a pozrieť si, ako vyzerá vykreslený kód. Upravte kód a obnovte prehliadač, aby ste videli, aký je výsledok. Na začiatku vyzerá stránka takto:</p>
+              <img src="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started/template-screenshot.png" alt="">
+            </section>
+
+            <!--"Referencia" časť dokumentácie-->
+            <section id="reference" class="section">
+              <h3>Referencia</h3>
+              <p>Všetka dokumentácia na tejto stránke je prevzatá z <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/HTML_basics#so_what_is_html" target="_blank">MDN</a></p>
+            </section>
+          </main>
+    </div>
+
+    <!--pridanie môjho skriptu na konci, aby to fungovalo správne-->
+    <script src="script.js"></script>
+</body>
+</html>
