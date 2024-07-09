@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta name="author" content="Alemkhan Bexeiit">
+            <meta name="description" content="Alemkhan Bexeiit">
+            <meta name="keywords" content="Alemkhan, Bexeiit, Alemkhan Bexeiit, website Alemkhan, Bexeiit website, portfolio Alemkhan, UMB Alemkhan, UMB Bexeiit, Alemkhan Bexeiit portfolio" />
+            <link rel="stylesheet" href="style.css" />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+            <link rel="shortcut icon" href="img/code_codepen_coding_development_program_programming_icon_123266.png" type="image/x-icon" />
+            <style>
+               .CardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    padding-top: 100px;
+}
+
+.CustomCard {
+    position: relative;
+    background-color: #666;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.CustomCard:hover {
+    transform: translateY(-5px);
+}
+
+.CardImage {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.CardContent {
+    padding: 20px;
+}
+
+.CardTitle {
+    margin-bottom: 10px;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.CardText {
+    color: #fff;
+    margin-bottom: 50px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.CardButton {
+    position: absolute;
+    bottom: 20px;
+    left:20px;
+    display: inline-block;
+    background-color: #50C878;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 1em;
+}
+
+.CardButton:hover {
+    background-color: #399959;
+}
+
+@media (max-width: 768px) {
+    .CustomCard {
+        width: 100%;
+    }
+}
+            </style>
+            <title>AlemkhanIT</title>
+        </head>
+</head>
+<body class="dark-mode">
+    <header class="darker-mode">
+        <div class="container header__inner">
+            <h1 class="logo"><a class="logo-a darker-mode" href="index.html"><i class="fa-solid fa-code"></i> Alemkhan <span class="hide-logo">Bexeiit</span></a></h1>
+            <nav>
+                <div class="darkmodebtn">
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <ul class="ul darker-mode menu__list">
+                    <li class="menu__item"><a id="ul-li-1" class="ul-li-a darker-mode menu__link" href="#home">Home</a><div class="link-bottom darker-mode" id="bt1"> </div></li>
+                    <li class="menu__item"><a id="ul-li-2" class="ul-li-a darker-mode menu__link" href="#about">About me</a><div class="link-bottom darker-mode" id="bt2"> </div></li>
+                    <li class="menu__item"><a id="ul-li-3" class="ul-li-a darker-mode menu__link" href="#works">Projects</a><div class="link-bottom darker-mode" id="bt3"> </div></li>
+                    <li class="menu__item"><a id="ul-li-4" class="ul-li-a darker-mode menu__link" href="#contact">Contact</a><div class="link-bottom darker-mode" id="bt4"> </div></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar darker-mode" id="bar1"></span>
+                    <span class="bar darker-mode" id="bar2"></span>
+                    <span class="bar darker-mode" id="bar3"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="CardContainer">
+        <div class="CustomCard">
+            <img class="CardImage" src="img/Screen Shot 2024-07-09 at 18.10.20.png" alt="Card Image">
+            <div class="CardContent">
+                <h2 class="CardTitle">Couchly: <br>HTML/CSS/JS</h2>
+                <p class="CardText">Couchly, designed with HTML, CSS, and JavaScript, features a modern and responsive layout. HTML provides structured content, CSS enhances visual appeal and responsiveness, while JavaScript adds interactive elements for a dynamic user experience.
+                </p>
+                <a href="https://couchl.netlify.app/" class="CardButton">Show</a>
+            </div>
+        </div>
+        <div class="CustomCard">
+            <img class="CardImage" src="img/Screen Shot 2024-07-09 at 18.22.14.png" alt="Card Image">
+            <div class="CardContent">
+                <h2 class="CardTitle">MiningStat: <br>HTML/CSS/JS</h2>
+                <p class="CardText">MiningStat features a layout designed with HTML, CSS, and JavaScript. The HTML provides structured content, CSS ensures a visually appealing and responsive design, and JavaScript adds dynamic elements to enhance user interaction.</p>
+                <a href="https://miningstat.netlify.app/" class="CardButton">Show</a>
+            </div>
+        </div>
+        <div class="CustomCard">
+            <img class="CardImage" src="img/todo.png" alt="Card Image">
+            <div class="CardContent">
+                <h2 class="CardTitle">Todo</h2>
+                <p class="CardText">This is a ToDo application I created using pure HTML, CSS, and JavaScript. It features a simple interface for adding and deleting tasks, making it easy to manage your daily activities.</p>
+                <a href="todo.html" class="CardButton">Show</a>
+            </div>
+        </div>
+        <div class="CustomCard">
+            <img class="CardImage" src="img/clicker.png" alt="Card Image">
+            <div class="CardContent">
+                <h2 class="CardTitle">Clicker</h2>
+                <p class="CardText">This Clicker application was built using pure HTML, CSS, and JavaScript. It allows users to click on a button to increment a counter, demonstrating basic interactive functionality and event handling in web development.
+                <a href="clicker.html" class="CardButton">Show</a>
+            </div>
+        </div>
+        <div class="CustomCard">
+            <img class="CardImage" src="img/documentation.png" alt="Card Image">
+            <div class="CardContent">
+                <h2 class="CardTitle">Documentation</h2>
+                <p class="CardText">This Mini Documentation HTML project was created using pure HTML, CSS, and JavaScript. It serves as a concise reference document, providing essential information and examples related to HTML tags, attributes, and best practices for web development.</p>
+                <a href="htmldoc.html" class="CardButton">Show</a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

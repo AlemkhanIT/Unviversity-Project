@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 /* štandardné nastavenia */
 * {
 	box-sizing: border-box;
@@ -578,3 +579,14 @@ main{
     }
 }
 
+.githubb{
+    color: #50C878;
+    text-decoration: none;
+}
+.githubb:visited{
+    color: #50C878;
+    text-decoration: none;
+}
+.githubb:hover{
+    text-decoration: underline;
+}
